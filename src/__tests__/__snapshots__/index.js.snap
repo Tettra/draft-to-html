@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertToHtml converts adjacent unordered and ordered list 1`] = `"<ul><li>One</li></ul><ol><li>Two</li></ol>"`;
+
+exports[`convertToHtml converts block quotes 1`] = `"<blockquote>Simon says let the blockquote speak</blockquote>"`;
+
+exports[`convertToHtml converts code blocks 1`] = `"<pre>Simon says let the code block speak</pre>"`;
+
+exports[`convertToHtml converts headers 1`] = `"<h1>Header</h1><h2>Header</h2><h3>Header</h3><h4>Header</h4><h5>Header</h5><h6>Header</h6>"`;
+
+exports[`convertToHtml converts inline styles 1`] = `"<p><a href=\\"https://placekitten.com/400/300\\"><strong>Sim</strong></a><strong>on sa</strong>ys let the code block speak</p>"`;
+
+exports[`convertToHtml converts ordered list 1`] = `"<ol><li>One</li><li>Two</li></ol>"`;
+
+exports[`convertToHtml converts unordered list 1`] = `"<ul><li>One</li><li>Two</li></ul>"`;
+
+exports[`convertToHtml converts unstyled blocks 1`] = `"<p>One</p><p>Two</p>"`;

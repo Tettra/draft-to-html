@@ -1,0 +1,21 @@
+{
+  "name": "html-to-draft-example",
+  "homepage": "https://juliankrispel.github.io/html-to-draft",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "draft-js": "^0.10.5",
+    "html-to-draft": "link:..",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
