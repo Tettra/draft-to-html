@@ -110,14 +110,31 @@ const appendTextFragments = (block, element, contentState, options = {}) => {
   )
 }
 
+const parseBlock = (block, contentState, options = {}) => {
+  let customParsed = null
+  let parsed = { nodeName: blockTypes[block.getType()] || 'P' }
+
+  if (options.parseBlock != null) {
+    customParsed = options.parseBlock(block, contentState)
+    if (customParsed != null) {
+      parsed = customParsed
+    }
+  }
+
+  return parsed
+}
+
 const convertToHtml = (contentState, options = {}) => {
   const blocks = contentState.getBlocksAsArray()
   const root = document.createElement('body')
 
   blocks.forEach(block => {
-    const elementType = blockTypes[block.getType()] || 'P'
+    const { nodeName, ...attrs } = parseBlock(block, contentState)
+    const element = document.createElement(nodeName)
 
-    const element = document.createElement(elementType)
+    Object.keys(attrs).forEach(attr => {
+      element.setAttribute(attr, attrs[attr])
+    })
 
     appendTextFragments(block, element, contentState)
 
