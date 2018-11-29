@@ -1,0 +1,28 @@
+{
+  "blocks": [
+    {
+      "key": "6qoif",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 0
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "type": "EMBEDLY",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "src": "https://www.youtube.com/watch?v=UwYwnMuYizs"
+      }
+    }
+  }
+}

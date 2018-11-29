@@ -17,22 +17,13 @@ convertToHtml(contentState, options)
 
 ```js
 {
-  parseStyle: string => {
-    nodeName: string,
-    [attrName: string]: string
-  },
+  parseStyle: string => HTMLElement,
   parseEntity: (entity: {
     type: DraftEntityType,
     mutability: DraftEntityMutability,
     data: ?{[key: string]: any},
-  }) => {
-    nodeName: string,
-    [attrName: string]: string
-  },
-  parseBlock: ContentBlock => {
-    nodeName: string,
-    [attrName: string]: string
-  }
+  }) => HTMLElement,
+  parseBlock: ContentBlock => HTMLElement
 }
 ```
 

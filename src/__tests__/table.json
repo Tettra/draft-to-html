@@ -1,0 +1,45 @@
+{
+  "blocks": [
+    {
+      "text": " ",
+      "type": "atomic",
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 0
+        }
+      ]
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "type": "TABLE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "rows": [
+          [
+            {
+              "blocks": [{ "text": "One" }],
+              "entityMap": {}
+            },
+            {
+              "blocks": [{ "text": "Two" }],
+              "entityMap": {}
+            }
+          ],
+          [
+            {
+              "blocks": [{ "text": "Three" }],
+              "entityMap": {}
+            },
+            {
+              "blocks": [{ "text": "Four" }],
+              "entityMap": {}
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

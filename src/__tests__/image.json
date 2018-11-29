@@ -1,0 +1,28 @@
+{
+  "blocks": [
+    {
+      "key": "3ou90",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 0
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "type": "IMAGE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "src": "https://tettra-local.s3.us-west-2.amazonaws.com/teams/1/users/1/IMG_5632-1543522327.JPG"
+      }
+    }
+  }
+}

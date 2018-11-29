@@ -1,0 +1,31 @@
+{
+  "blocks": [
+    {
+      "key": "91v6m",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 0
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "type": "FILE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "name": "check.svg",
+        "type": "image/svg+xml",
+        "src": "https://tettra-local.s3.us-west-2.amazonaws.com/teams/1/users/1/check-1543521245.svg",
+        "date": "2018-11-29T19:56:53.548Z"
+      }
+    }
+  }
+}

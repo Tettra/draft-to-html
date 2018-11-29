@@ -1,0 +1,26 @@
+{
+  "blocks": [
+    {
+      "key": "8jb2g",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 0
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "type": "HR",
+      "mutability": "IMMUTABLE",
+      "data": {}
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "entityMap": {
+    "0": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3183",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3183",
+        "title": "🐟 [EPIC] Revamp tables",
+        "number": 3183,
+        "insertedAt": 1530618225
+      }
+    },
+    "1": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3187",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3187",
+        "title": "Ability to import or paste in a table",
+        "number": 3187,
+        "insertedAt": 1530618232
+      }
+    },
+    "2": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3233",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3233",
+        "title": "Focusing out of cell in table loses undo/redo history",
+        "number": 3233,
+        "insertedAt": 1530618245
+      }
+    },
+    "3": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3180",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3180",
+        "title": "Table is not inserted in the correct spot",
+        "number": 3180,
+        "insertedAt": 1530618268
+      }
+    },
+    "4": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3172",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3172",
+        "title": "Weird behavior when pasting into code block",
+        "number": 3172,
+        "insertedAt": 1530618284
+      }
+    },
+    "5": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3170",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3170",
+        "title": "Import from Google Docs strips out bullets",
+        "number": 3170,
+        "insertedAt": 1530618291
+      }
+    },
+    "6": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3169",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3169",
+        "title": "Mentions + page auto suggest don't work if there's text present after the @/+",
+        "number": 3169,
+        "insertedAt": 1530618310
+      }
+    },
+    "7": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3163",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3163",
+        "title": "Ability to select files in editor",
+        "number": 3163,
+        "insertedAt": 1530618340
+      }
+    },
+    "8": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3160",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3160",
+        "title": "Pasting into code blocks when text is highlighted doesn't work",
+        "number": 3160,
+        "insertedAt": 1530618349
+      }
+    },
+    "9": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/3184",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/3184",
+        "title": "🐟 [EPIC] Improved copy/paste/import support",
+        "number": 3184,
+        "insertedAt": 1530618365
+      }
+    },
+    "10": {
+      "type": "GITHUB-ISSUE",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "api_url": "https://api.github.com/repos/Tettra/tettra-wiki/issues/2352",
+        "url": "https://github.com/Tettra/tettra-wiki/issues/2352",
+        "title": "Use Redstone for Diff (User ability to view diff of large revisions)",
+        "number": 2352,
+        "insertedAt": 1530618188
+      }
+    }
+  },
+  "blocks": [
+    {
+      "key": "a683s",
+      "text": "This is a list of issues and other work that would be good for a contractor to do:",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [],
+      "data": {}
+    },
+    {
+      "key": "c972r",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [],
+      "data": {}
+    },
+    {
+      "key": "1tgj",
+      "text": "🐟 [EPIC] Revamp tables",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 22,
+          "key": 0
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "d4c44",
+      "text": "Ability to import or paste in a table",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 37,
+          "key": 1
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "ds5vk",
+      "text": "Focusing out of cell in table loses undo/redo history",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 53,
+          "key": 2
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "9k1kd",
+      "text": "Table is not inserted in the correct spot",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 41,
+          "key": 3
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "bjene",
+      "text": "Weird behavior when pasting into code block",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 43,
+          "key": 4
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "7fhs4",
+      "text": "Import from Google Docs strips out bullets",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 42,
+          "key": 5
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "akutm",
+      "text": "Mentions + page auto suggest don't work if there's text present after the @/+",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 77,
+          "key": 6
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "76rec",
+      "text": "Ability to select files in editor",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 33,
+          "key": 7
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "2mban",
+      "text": "Pasting into code blocks when text is highlighted doesn't work",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 62,
+          "key": 8
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "7majn",
+      "text": "🐟 [EPIC] Improved copy/paste/import support",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 43,
+          "key": 9
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "263l6",
+      "text": "Use Redstone for Diff (User ability to view diff of large revisions)",
+      "type": "unordered-list-item",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 68,
+          "key": 10
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

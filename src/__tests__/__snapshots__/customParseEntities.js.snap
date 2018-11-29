@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertToHtml with custom parseBlock option converts mentions with custom parseBlock function 1`] = `"<p><a title=\\"Notes on Link Building [WIP]\\" href=\\"https://staging.tettra.co/teams/tettra/pages/notes-on-link-building-wip\\">Google</a> <a title=\\"Notes on Link Building [WIP]\\" href=\\"https://staging.tettra.co/teams/tettra/pages/notes-on-link-building-wip\\">Page</a> <a title=\\"Jules\\" href=\\"https://dev.tettra.co/teams/jules/users/1\\">@Jules</a> <a title=\\"Use Redstone for Diff (User ability to view diff of large revisions)\\" href=\\"https://github.com/Tettra/tettra-wiki/issues/2352\\">Github</a></p>"`;

@@ -30,15 +30,13 @@ const listElements = {
 
 const parseEntity = (entity, options = {}) => {
   let customParsed = null
-  let parsed = { }
+  let parsed = null
 
   if (entity.type.toUpperCase() === 'LINK' &&
     entity.data != null &&
     entity.data.src != null) {
-    parsed = {
-      nodeName: 'A',
-      href: entity.data.src
-    }
+    parsed = document.createElement('A')
+    parsed.setAttribute('href', entity.data.src)
   }
 
   if (options.parseEntity != null) {
@@ -52,62 +50,80 @@ const parseEntity = (entity, options = {}) => {
 }
 
 const parseStyle = (style, options = {}) => {
-  let customParsed = null
-  let parsed = { nodeName: inlineStyleTags[style.toUpperCase()] || 'span' }
+  let element = document.createElement(inlineStyleTags[style.toUpperCase()] || 'span')
   if (options.parseStyle != null) {
-    customParsed = options.parseStyle(style)
-    if (customParsed != null) {
-      parsed = customParsed
-    }
+    element = options.parseStyle(style) || element
   }
 
-  return parsed
+  return element
+}
+
+const getCharacterRanges = block => {
+  return block.characterList.reduce((ranges, characterData, index) => {
+    const lastRange = ranges.slice(-1)[0]
+
+    if (lastRange != null && lastRange.characterData.equals(characterData)) {
+      lastRange.length++
+      return ranges
+    } else {
+      return [
+        ...ranges,
+        {
+          offset: index,
+          length: 1,
+          characterData
+        }
+      ]
+    }
+  }, [])
 }
 
 const appendTextFragments = (block, element, contentState, options = {}) => {
-  let range = {}
   const text = block.getText()
 
-  block.findStyleRanges(
-    (_range) => {
-      range = _range.toJS()
-      if (range.entity != null) {
-        range.entity = contentState.getEntity(range.entity).toJS()
-      }
-      return true
-    },
-    (start, end) => {
-      let innerText = document.createTextNode(text.slice(start, end))
+  if (block.getType().toLowerCase() === 'atomic') {
+    return
+  }
 
-      if (range.style != null && range.style.length > 0) {
-        range.style.forEach(style => {
-          const parsedStyle = parseStyle(style)
-          if (parsedStyle != null) {
-            const { nodeName } = parsedStyle
-            const styleEl = document.createElement(nodeName)
-            styleEl.appendChild(innerText)
-            innerText = styleEl
-          }
-        })
-      }
+  const characterRanges = getCharacterRanges(block)
 
-      if (range.entity != null) {
-        const parsedEntity = parseEntity(range.entity, options)
+  characterRanges.forEach(({
+    offset,
+    length,
+    characterData
+  }) => {
+    const start = offset
+    const end = offset + length
+    const { style } = characterData
+    const entity = characterData.entity != null ? contentState.getEntity(characterData.entity) : null
 
-        if (parsedEntity != null) {
-          const { nodeName, ...attrs } = parsedEntity
-          const entityEl = document.createElement(nodeName)
-          Object.keys(attrs).forEach(attr => {
-            entityEl.setAttribute(attr, attrs[attr])
-          })
-          entityEl.appendChild(innerText)
-          innerText = entityEl
+    // console.log('text', text.slice(start, end))
+    // console.log('characterData', characterData)
+    // console.log('start', start, 'end', end)
+
+    let innerText = document.createTextNode(text.slice(start, end))
+
+    if (style != null && style.size > 0) {
+      style.forEach(style => {
+        const parsedStyle = parseStyle(style)
+        if (parsedStyle != null) {
+          parsedStyle.appendChild(innerText)
+          innerText = parsedStyle
         }
-      }
-
-      element.appendChild(innerText)
+      })
     }
-  )
+
+    if (entity != null) {
+      const parsedEntity = parseEntity(entity, options)
+
+      if (parsedEntity != null) {
+        parsedEntity.appendChild(innerText)
+        innerText = parsedEntity
+      }
+    }
+
+    element.appendChild(innerText)
+  })
 }
 
 const parseBlock = (block, contentState, options = {}) => {
@@ -129,19 +145,20 @@ const convertToHtml = (contentState, options = {}) => {
   const root = document.createElement('body')
 
   blocks.forEach(block => {
-    const { nodeName, ...attrs } = parseBlock(block, contentState)
+    const { nodeName, ...attrs } = parseBlock(block, contentState, options)
     const element = document.createElement(nodeName)
 
     Object.keys(attrs).forEach(attr => {
       element.setAttribute(attr, attrs[attr])
     })
 
-    appendTextFragments(block, element, contentState)
+    appendTextFragments(block, element, contentState, options)
 
     if (block.getType().includes('ordered-list-item')) {
       if (root.lastChild == null || listElements[block.getType()] !== root.lastChild.nodeName) {
         root.appendChild(document.createElement(listElements[block.getType()]))
       }
+
       root.lastChild.appendChild(element)
     } else {
       root.appendChild(element)

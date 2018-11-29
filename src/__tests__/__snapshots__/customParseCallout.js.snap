@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertToHtml with custom parseBlock option converts calloutBlock with custom parseBlock function 1`] = `"<blockquote>Hello there frien<strong>d this</strong> is a callo<em>ut bloc</em>k yep</blockquote>"`;

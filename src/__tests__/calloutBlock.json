@@ -1,0 +1,25 @@
+{
+  "blocks": [
+    {
+      "key": "dbt45",
+      "text": "Hello there friend this is a callout block yep",
+      "type": "callout",
+      "depth": 0,
+      "inlineStyleRanges": [
+        {
+          "offset": 17,
+          "length": 6,
+          "style": "BOLD"
+        },
+        {
+          "offset": 34,
+          "length": 7,
+          "style": "ITALIC"
+        }
+      ],
+      "entityRanges": [],
+      "data": {}
+    }
+  ],
+  "entityMap": {}
+}
